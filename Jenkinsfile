@@ -1,5 +1,9 @@
 pipeline {
-  agent any                            
+  agent {
+    docker {
+        image 'mcr.microsoft.com/playwright:v1.51.1-jammy'
+    }
+  }                            
 
   tools {                              
     nodejs 'NodeJS_24'
@@ -9,7 +13,6 @@ pipeline {
     stage('Install dependencies') {
       steps {
         sh 'npm ci'                    
-        sh 'npx playwright install --with-deps'
         sh 'npm install -g allure-commandline'   
       }
     }
