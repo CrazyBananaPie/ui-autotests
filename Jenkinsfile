@@ -1,9 +1,10 @@
 pipeline {
   agent {
     docker {
-        image 'mcr.microsoft.com/playwright:v1.51.1-jammy'
+      image 'mcr.microsoft.com/playwright:v1.52.0-noble'
+      args  '--user 1001'
     }
-  }                            
+  }                     
 
   tools {                              
     nodejs 'NodeJS_24'
