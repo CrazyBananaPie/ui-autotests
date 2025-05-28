@@ -1,9 +1,6 @@
 pipeline {
   agent {
-    docker {
-      image 'mcr.microsoft.com/playwright:v1.52.0-noble'
-      args  '--user 1001'
-    }
+    label 'docker && playwright && tests'
   }                     
 
   tools {                              
