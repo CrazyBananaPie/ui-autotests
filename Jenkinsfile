@@ -5,13 +5,13 @@ pipeline {
 
   tools {                              
     nodejs 'NodeJS_24'
+    allureCommandline 'Allure_2.34'
   }
 
   stages {
     stage('Install dependencies') {
       steps {
         sh 'npm ci'                    
-        sh 'npm install -g allure-commandline'   
       }
     }
 
