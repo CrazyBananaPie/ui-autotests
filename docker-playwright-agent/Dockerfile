@@ -1,5 +1,5 @@
 # Start from Playwright’s image (browsers + deps baked in)
-FROM mcr.microsoft.com/playwright:v1.52.0-noble
+FROM mcr.microsoft.com/playwright:v1.51.1-noble
 
 USER root
 
