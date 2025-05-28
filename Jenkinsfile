@@ -5,7 +5,7 @@ pipeline {
 
   tools {                              
     nodejs 'NodeJS_24'
-    allureCommandline 'Allure_2.34'
+    allure 'Allure_2.34'
   }
 
   stages {
